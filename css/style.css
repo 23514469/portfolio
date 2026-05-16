@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap');
 
+
 /* CSS Variables for Theming */
 :root {
     /* Dark Theme (Default) */
@@ -90,11 +91,22 @@ section {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 700;
     cursor: pointer;
     letter-spacing: 1px;
+}
+
+.logo img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--main-color);
 }
 
 .logo span {
@@ -622,3 +634,7 @@ html[dir="rtl"] .about-content h2 {
         width: 100%;
     }
 }
+
+
+
+
