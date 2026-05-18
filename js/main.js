@@ -104,4 +104,41 @@ document.addEventListener('DOMContentLoaded', () => {
             animated = true;
         }
     });
+
+    /*==================== SCROLL REVEAL ====================*/
+    if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal({
+            distance: '80px',
+            duration: 2000,
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+        ScrollReveal().reveal('.home-img, .skills-container, .projects-container, .contact form', { origin: 'bottom' });
+        ScrollReveal().reveal('.home-content h1, .about-img', { origin: isArabic ? 'right' : 'left' });
+        ScrollReveal().reveal('.home-content p, .about-content', { origin: isArabic ? 'left' : 'right' });
+    }
+    /*==================== VANILLA TILT 3D EFFECT ====================*/
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".skills-box"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+        
+        VanillaTilt.init(document.querySelectorAll(".project-box"), {
+            max: 10,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3
+        });
+
+        VanillaTilt.init(document.querySelectorAll(".about-img, .home-img .img-box"), {
+            max: 10,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+    }
 });
