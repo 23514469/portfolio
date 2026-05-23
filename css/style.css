@@ -103,11 +103,10 @@ section {
 }
 
 .logo img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--main-color);
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
 }
 
 .logo span {
@@ -647,5 +646,3 @@ html[dir="rtl"] .about-content h2 {
         width: 100%;
     }
 }
-
-
