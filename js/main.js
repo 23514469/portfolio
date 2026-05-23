@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /*==================== TOGGLE ICON NAVBAR ====================*/
+   
     let menuIcon = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
     };
 
-    /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+   
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('header nav a');
 
@@ -28,16 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        /*==================== STICKY NAVBAR ====================*/
+        
         let header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 100);
 
-        /*==================== REMOVE TOGGLE ICON AND NAVBAR WHEN CLICK NAVBAR LINK ====================*/
         menuIcon.classList.remove('bx-x');
         navbar.classList.remove('active');
     };
 
-    /*==================== THEME TOGGLE ====================*/
+
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn.querySelector('i');
     
