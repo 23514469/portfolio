@@ -646,3 +646,6 @@ html[dir="rtl"] .about-content h2 {
     }
 
     .contact form .input-box input {
+        width: 100%;
+    }
+}
