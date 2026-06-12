@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelrahman Zaghloul | Front-End Developer | بشمهندس عبدالرحمن زغلول | عبدالرحمن احمد</title>
 
-    
-    <link rel="icon" type="image/jpeg" href="./favicon.png.jpeg">
-    <link rel="apple-touch-icon" href="./favicon.png.jpeg">
+    <!-- Favicon (Logo for Search and Browser Tab) -->
+    <link rel="icon" type="image/jpeg" href="./assets/profile.jpg">
+    <link rel="apple-touch-icon" href="./assets/profile.jpg">
 
     <!-- SEO Meta Tags -->
     <meta name="google-site-verification" content="1S9GLdK1HdFmdtW8_DOmVg0P6SZ8OwcuaF0TGHG8VO8" />
@@ -20,7 +20,7 @@
     <meta name="author" content="Abdelrahman Ahmed Zaghloul">
     <link rel="canonical" href="https://abdelrahman-zaghloul.com/"> <!-- Update with actual domain later -->
 
-    
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Abdelrahman Ahmed Zaghloul | Front-End Developer">
     <meta property="og:description"
         content="Portfolio of Abdelrahman Ahmed Zaghloul, a highly professional Front-End Developer from Egypt.">
@@ -28,17 +28,8 @@
     <meta property="og:url" content="https://abdelrahman-zaghloul.com/">
     <meta property="og:image" content="https://abdelrahman-zaghloul.com/assets/profile.jpg">
     <meta property="og:image:alt" content="Eng. Abdelrahman Ahmed Zaghloul - بشمهندس عبدالرحمن زغلول">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Abdelrahman Ahmed Zaghloul",
-  "url": "https://portfolio-one-ashy-lqqsyt38sv.vercel.app",
-  "image": "https://portfolio-one-ashy-lqqsyt38sv.vercel.app/logo.png"
-}
-</script>
 
- 
+    <!-- Schema.org for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,18 +57,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-  
+    <!-- BoxIcons for lightweight icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-   
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
+    <!-- Header & Nav -->
     <header class="header">
         <a href="#" class="logo">
-            <img src="./favicon.png.jpeg" alt="Logo">
+            <img src="./assets/profile.jpg" alt="Logo">
             Zaghloul<span>.dev</span>
         </a>
 
@@ -104,7 +96,7 @@
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Abdelrahman Zaghloul</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <h3>And I'm a <span class="multiple-text">Front-End Developer</span></h3>
             <p>I build modern, premium, and fully responsive websites. Passionate about creating seamless user
                 experiences and writing clean, highly optimized code.</p>
 
@@ -119,11 +111,10 @@
                     rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
             </div>
 
-            <a href="#" class="btn">Download CV</a>
+            <a href="./cv.html" class="btn" target="_blank">Download CV</a>
         </div>
         <div class="home-img">
             <div class="img-box">
-                <div class="glow-effect"></div>
                 <img src="./assets/profile.jpg" alt="Abdelrahman Ahmed Zaghloul - عبدالرحمن أحمد زغلول" class="profile-pic">
             </div>
         </div>
@@ -272,14 +263,14 @@
 
         <form action="#" id="contactForm">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number" required>
-                <input type="text" placeholder="Email Subject" required>
+                <input type="number" id="phone" placeholder="Mobile Number" required>
+                <input type="text" id="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
@@ -294,12 +285,12 @@
         </div>
     </footer>
 
-    <!-- Typed.js for typing effect -->
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
+    
     <!-- VanillaTilt for 3D realism -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
