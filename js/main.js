@@ -142,3 +142,27 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 400,
             glare: true,
             "max-glare": 0.2
+        });
+    }
+
+    /*==================== CONTACT FORM TO WHATSAPP ====================*/
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Format message for WhatsApp
+            const whatsappNumber = "201061877690"; 
+            const text = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+});
