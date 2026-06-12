@@ -3,29 +3,29 @@
 /* CSS Variables for Theming */
 :root {
     /* Dark Theme (Default) */
-    --bg-color: #080808;
-    --second-bg-color: rgba(255, 255, 255, 0.03);
-    --text-color: #ededed;
-    --main-color: #00e1ff;
-    --gradient: linear-gradient(135deg, #00e1ff, #a134eb);
-    --glass-bg: rgba(8, 8, 8, 0.7);
+    --bg-color: #121212;
+    --second-bg-color: rgba(255, 255, 255, 0.04);
+    --text-color: #e0e0e0;
+    --main-color: #8ab4f8;
+    --gradient: linear-gradient(135deg, #8ab4f8, #669df6);
+    --glass-bg: rgba(18, 18, 18, 0.8);
     --border-color: rgba(255, 255, 255, 0.08);
     
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    --glow-shadow: 0 0 1.5rem rgba(0, 225, 255, 0.25);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --glow-shadow: 0 0 1.5rem rgba(138, 180, 248, 0.2);
 }
 
 [data-theme="light"] {
-    --bg-color: #f5f5f5;
-    --second-bg-color: rgba(255, 255, 255, 0.7);
-    --text-color: #1a1a1a;
-    --main-color: #0066ff;
-    --gradient: linear-gradient(135deg, #0066ff, #9b28ca);
-    --glass-bg: rgba(255, 255, 255, 0.7);
+    --bg-color: #f8f9fa;
+    --second-bg-color: rgba(0, 0, 0, 0.02);
+    --text-color: #333333;
+    --main-color: #1a73e8;
+    --gradient: linear-gradient(135deg, #1a73e8, #174ea6);
+    --glass-bg: rgba(248, 249, 250, 0.8);
     --border-color: rgba(0, 0, 0, 0.08);
     
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --glow-shadow: 0 0 1.5rem rgba(0, 102, 255, 0.15);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --glow-shadow: 0 0 1.5rem rgba(26, 115, 232, 0.15);
 }
 
 * {
@@ -103,10 +103,11 @@ section {
 }
 
 .logo img {
-    height: 5rem;
-    width: auto;
-    object-fit: contain;
-    border-radius: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
 }
 
 .logo span {
@@ -288,6 +289,8 @@ html[dir="rtl"] .social-media a {
     0% { transform: scale(0.85); opacity: 0.2; }
     100% { transform: scale(1.15); opacity: 0.5; }
 }
+
+
 
 /* About Section */
 .about {
@@ -643,6 +646,3 @@ html[dir="rtl"] .about-content h2 {
     }
 
     .contact form .input-box input {
-        width: 100%;
-    }
-}
