@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-   
+    /*==================== TOGGLE ICON NAVBAR ====================*/
     let menuIcon = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
     };
 
-   
+    /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('header nav a');
 
@@ -28,15 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        
+        /*==================== STICKY NAVBAR ====================*/
         let header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 100);
 
+        /*==================== REMOVE TOGGLE ICON AND NAVBAR WHEN CLICK NAVBAR LINK ====================*/
         menuIcon.classList.remove('bx-x');
         navbar.classList.remove('active');
     };
 
-
+    /*==================== THEME TOGGLE ====================*/
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn.querySelector('i');
     
@@ -78,13 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
         ? ['مطور واجهات أمامية', 'مبرمج ريأكت', 'مصمم مواقع']
         : ['Front-End Developer', 'React Developer', 'Web Designer'];
 
-    const typed = new Typed('.multiple-text', {
-        strings: strings,
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true
-    });
+    if (document.querySelector('.multiple-text')) {
+        const typed = new Typed('.multiple-text', {
+            strings: strings,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    }
 
     /*==================== ANIMATE PROGRESS BARS ON SCROLL ====================*/
     const skillsSection = document.getElementById('skills');
@@ -92,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let animated = false;
 
     window.addEventListener('scroll', () => {
-        if (!animated && window.scrollY + window.innerHeight >= skillsSection.offsetTop + 100) {
+        if (!animated && skillsSection && window.scrollY + window.innerHeight >= skillsSection.offsetTop + 100) {
             progressBars.forEach(bar => {
                 const width = bar.style.width;
                 bar.style.width = '0%';
@@ -117,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ScrollReveal().reveal('.home-content h1, .about-img', { origin: isArabic ? 'right' : 'left' });
         ScrollReveal().reveal('.home-content p, .about-content', { origin: isArabic ? 'left' : 'right' });
     }
+    
     /*==================== VANILLA TILT 3D EFFECT ====================*/
     if (typeof VanillaTilt !== 'undefined') {
         VanillaTilt.init(document.querySelectorAll(".skills-box"), {
@@ -138,6 +142,3 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 400,
             glare: true,
             "max-glare": 0.2
-        });
-    }
-});
